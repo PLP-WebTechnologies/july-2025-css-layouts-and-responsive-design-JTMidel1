@@ -1,4 +1,6 @@
-/* Reset & base styles */
+/* ================================
+   RESET & BASE STYLES
+================================ */
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +11,12 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
+  background-color: #fafafa;
 }
 
-/* Header */
+/* ================================
+   HEADER & NAVIGATION (Flexbox)
+================================ */
 .site-header {
   background-color: #4CAF50;
   color: white;
@@ -21,10 +26,10 @@ body {
 
 .navbar ul {
   list-style: none;
-  display: flex;
-  justify-content: center;
+  display: flex;               /* Flexbox for horizontal nav */
+  justify-content: center;     /* Center nav items */
   margin-top: 10px;
-  flex-wrap: wrap;
+  flex-wrap: wrap;             /* Wrap on smaller screens */
 }
 
 .navbar ul li {
@@ -41,10 +46,12 @@ body {
   text-decoration: underline;
 }
 
-/* Grid Layout for Main */
+/* ================================
+   MAIN LAYOUT (Grid)
+================================ */
 .grid-layout {
   display: grid;
-  grid-template-columns: 1fr 3fr; /* sidebar | content */
+  grid-template-columns: 1fr 3fr; /* Sidebar + Content */
   gap: 20px;
   padding: 20px;
 }
@@ -56,28 +63,32 @@ body {
 }
 
 .content {
-  background: #fafafa;
+  background: #ffffff;
   padding: 20px;
   border-radius: 8px;
 }
 
-/* Flexbox for Cards */
+/* ================================
+   CARDS (Flexbox inside Content)
+================================ */
 .card-container {
-  display: flex;
+  display: flex;                /* Flexbox container */
   gap: 20px;
   margin-top: 20px;
-  flex-wrap: wrap;
+  flex-wrap: wrap;              /* Wrap cards on small screens */
 }
 
 .card {
   background: #e3f2fd;
   border: 2px solid #2196F3;
   padding: 15px;
-  flex: 1 1 200px; /* grow, shrink, base width */
+  flex: 1 1 200px;              /* Grow, shrink, min-width */
   border-radius: 8px;
 }
 
-/* Footer */
+/* ================================
+   FOOTER
+================================ */
 .site-footer {
   background: #333;
   color: white;
@@ -86,29 +97,29 @@ body {
   margin-top: 20px;
 }
 
-/* ----------------- */
-/* Responsive Design */
-/* ----------------- */
+/* ================================
+   RESPONSIVE BREAKPOINTS
+================================ */
 
-/* Tablet */
+/* Tablet (stack sidebar & content) */
 @media (max-width: 768px) {
   .grid-layout {
-    grid-template-columns: 1fr; /* stack sidebar & content */
+    grid-template-columns: 1fr; /* Single column layout */
   }
 
   .navbar ul {
-    flex-direction: column;
+    flex-direction: column;     /* Stack nav items vertically */
     align-items: center;
   }
 }
 
-/* Mobile */
+/* Mobile (smaller text & stacked cards) */
 @media (max-width: 480px) {
   .site-header h1 {
     font-size: 1.5rem;
   }
 
   .card-container {
-    flex-direction: column; /* stack cards */
+    flex-direction: column;     /* Stack cards vertically */
   }
 }
