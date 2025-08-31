@@ -8,9 +8,10 @@
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- ===== HEADER ===== -->
   <header class="site-header">
     <h1>My Responsive Webpage</h1>
+    <!-- Navigation uses Flexbox -->
     <nav class="navbar">
       <ul>
         <li><a href="#">Home</a></li>
@@ -21,18 +22,22 @@
     </nav>
   </header>
 
-  <!-- Main layout with Grid -->
+  <!-- ===== MAIN CONTENT ===== -->
+  <!-- Grid is used for sidebar + content -->
   <main class="grid-layout">
+
+    <!-- Sidebar (Grid item) -->
     <aside class="sidebar">
       <h2>Sidebar</h2>
-      <p>This is the sidebar content. It moves below the main content on smaller screens.</p>
+      <p>This is the sidebar content. On smaller screens, it stacks below the main content.</p>
     </aside>
 
+    <!-- Main content area (Grid item) -->
     <section class="content">
       <h2>Main Content</h2>
-      <p>This section uses CSS Grid for the page layout and Flexbox for organizing the cards below.</p>
+      <p>This section uses CSS Grid for layout and Flexbox for organizing the cards below.</p>
 
-      <!-- Cards using Flexbox -->
+      <!-- Cards (Flexbox container) -->
       <div class="card-container">
         <div class="card">
           <h3>Card One</h3>
@@ -50,7 +55,7 @@
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <p>&copy; 2025 My Responsive Website | Built with Flexbox & Grid</p>
   </footer>
